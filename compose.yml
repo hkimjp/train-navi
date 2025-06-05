@@ -1,0 +1,12 @@
+services:
+  python3:
+    image: hkimjp/python:3.13.4
+    user: vscode
+    working_dir: /workspace
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/workspace
+    entrypoint: [ "sleep", "infinity" ]
+    # entrypoint: [ "python3", "app.py" ]
+
