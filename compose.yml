@@ -7,6 +7,5 @@ services:
       - "5000:5000"
     volumes:
       - .:/workspace
-    entrypoint: [ "sleep", "infinity" ]
-    # entrypoint: [ "python3", "app.py" ]
-
+    #entrypoint: [ "sleep", "infinity" ]
+    entrypoint: [ "python3", "app.py" ]
