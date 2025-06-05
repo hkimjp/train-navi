@@ -8,6 +8,10 @@ debug = True
 
 @app.route("/", methods=["GET", "POST"])
 def index():
+    """
+    index page
+    """
+    print("index")
     app.logger.info("index, method: %s", request.method)
     if request.method == "POST":
         place, dest = request.form.get("place"), request.form.get("destination")
@@ -36,7 +40,7 @@ def start_server(debug):
 
 
 def start_server2(debug):
-    print("Starting server at port 5000")
+    print("Starting server at port 5000 from start_server2")
     app.run(host="0.0.0.0", port=5000, debug=debug)
 
 
